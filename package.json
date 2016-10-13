@@ -3,12 +3,14 @@
   "version": "0.0.1",
   "description": "node and handlebars generator to make a-frame based WebVR models of atoms.",
   "main": "index.js",
+  
   "dependencies": {
     "handlebars": "^4.0.5"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
