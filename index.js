@@ -14,8 +14,11 @@ for(var j = 0; j<aShellMaxes.length; j++){
     aElectonPoses.push({
       shell:j+1,
       angle:aAngles[i%aAngles.length],
+      angle2:i*20,
+      angle3:i*15,
       dist: j+1,
-      dur : (j+1)*iInnerOrbit
+      dur : (j+1)*(j+1)*iInnerOrbit,
+      anti : i%2 == 0
     });
     i++;
   }
@@ -46,5 +49,6 @@ for (sName in oElements){
     
     var html = template(oElement);  
     fs.writeFileSync(oElement.filename, html, "utf8");
+    console.log("Written", oElement.filename);
   }
 }

@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>UTC OLP - Atoms {{name}}</title>
+    <title>{{name}} : UTC OLP - Atoms </title>
     <meta name="description" content="Animation - A-Frame">
     <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
     <script src="https://rawgit.com/bryik/aframe-bmfont-text-component/master/dist/aframe-bmfont-text-component.min.js"></script>
@@ -50,7 +50,7 @@
         </a-entity>
 
         {{#each electrons}}
-          <a-entity rotation="{{angle}} 0 {{angle}}">
+          <a-entity rotation="{{angle}} {{angle2}} {{angle3}}">
             <a-entity position="0 0 0" >
               <a-animation mixin="orbit" to="0 360 0" dir="{{dur}}"></a-animation>
               <a-entity mixin="electron" position="{{dist}} 0 0" ></a-entity>
