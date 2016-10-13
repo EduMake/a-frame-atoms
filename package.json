@@ -1,0 +1,19 @@
+{
+  "name": "a-frame-atoms",
+  "version": "0.0.1",
+  "description": "node and handlebars generator to make a-frame based WebVR models of atoms.",
+  "main": "index.js",
+  "dependencies": {
+    "handlebars": "^4.0.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.utcsheffield.org.uk/meggleton/a-frame-atoms.git"
+  },
+  "author": "Mr Eggleton",
+  "license": "AGPL-3.0"
+}
