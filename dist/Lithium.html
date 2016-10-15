@@ -43,10 +43,20 @@
      
       
         <a-entity rotation="0 0 0" position="0 0 0">
-            <a-entity mixin="proton"  position="0 -0.2 0"></a-entity>
-            <a-entity mixin="proton"  position="0 0.2 0"></a-entity>
-            <a-entity mixin="neutron"  position="0 0 -0.2"></a-entity>
-            <a-entity mixin="neutron"  position="0 0 0.2"></a-entity>
+          <a-entity position="0 0 0">
+              <a-entity rotation="0 0 0">
+                <a-entity mixin="proton"  position="0.25198420997897464 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 0 90">
+                <a-entity mixin="neutron"  position="0.25198420997897464 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 0 180">
+                <a-entity mixin="proton"  position="0.25198420997897464 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 0 270">
+                <a-entity mixin="neutron"  position="0.25198420997897464 0 0"></a-entity>
+              </a-entity>
+            </a-entity>
             <a-animation mixin="spin"></a-animation>
         </a-entity>
 

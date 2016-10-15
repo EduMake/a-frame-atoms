@@ -43,10 +43,13 @@
      
       
         <a-entity rotation="0 0 0" position="0 0 0">
-            <a-entity mixin="proton"  position="0 -0.2 0"></a-entity>
-            <a-entity mixin="proton"  position="0 0.2 0"></a-entity>
-            <a-entity mixin="neutron"  position="0 0 -0.2"></a-entity>
-            <a-entity mixin="neutron"  position="0 0 0.2"></a-entity>
+          <a-entity position="0 0 0">
+            {{#each nucleus}}
+              <a-entity rotation="0 {{lat}} {{lon}}">
+                <a-entity mixin="{{type}}"  position="{{radius}} 0 0"></a-entity>
+              </a-entity>
+            {{/each}}
+            </a-entity>
             <a-animation mixin="spin"></a-animation>
         </a-entity>
 
