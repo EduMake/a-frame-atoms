@@ -1,12 +1,14 @@
 var fs = require("fs");
 var Handlebars = require("handlebars");
 
+const HTMLDecoderEncoder = require("html-encoder-decoder");
+
 var aShellMaxes = [2,8,8,18] ;
 var aAngles = [0, 180, 90,  270, 45, 215, 135, 315];
 
 var aElectonPoses = [];
 var i = 0 ;
-var iInnerOrbit = 3000;
+var iInnerOrbit = 5000;
 
 
 for(var j = 0; j<aShellMaxes.length; j++){
@@ -17,7 +19,7 @@ for(var j = 0; j<aShellMaxes.length; j++){
       angle2:i*20,
       angle3:i*15,
       dist: j+1,
-      dur : (j+1)*iInnerOrbit,
+      dur : iInnerOrbit,
       anti : i%2 == 0
     });
     i++;
@@ -106,6 +108,7 @@ for (var sName in oElements){
     oElement.neutrons =  oElement.nucleons - oElement.number;
     oElement.electrons = [];
     oElement.nucleus = [];
+    oElement.summary =  HTMLDecoderEncoder.encode(oElement.summary);
     
 
     //Periodic Table Layout    
