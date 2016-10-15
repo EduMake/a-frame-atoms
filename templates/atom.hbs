@@ -53,8 +53,14 @@
         {{#each electrons}}
           <a-entity rotation="{{angle}} {{angle2}} {{angle3}}">
             <a-entity position="0 0 0" >
-              <a-animation mixin="orbit" to="0 360 0" dir="{{dur}}"></a-animation>
-              <a-entity mixin="electron" position="{{dist}} 0 0" ></a-entity>
+              <a-torus color="#CCC" radius="{{dist}}" radius-tubular="0.02" rotation="90 0 0" opacity="0.1"></a-torus>
+                <!--<a-ring color="teal" radius-inner="{{dist}}" radius-outer="{{dist}}.2" rotation="90 0 0" ></a-ring>-->
+                <!--<a-circle color="#CCC" opacity="0.05" rotation="90 0 0" radius="{{dist}}"></a-circle>-->
+             </a-entity>   
+            <a-entity position="0 0 0" >
+              <a-animation mixin="orbit" to="0 360 0" dur="{{dur}}"></a-animation>
+              <a-entity mixin="electron" position="{{dist}} 0 0" ></a-entity> 
+              
             </a-entity>
           </a-entity>
         {{/each}}

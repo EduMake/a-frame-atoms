@@ -58,7 +58,7 @@
             {{#each electrons}}
               <a-entity rotation="{{angle}} {{angle2}} {{angle3}}">
                 <a-entity position="0 0 0" >
-                  <a-animation mixin="orbit" to="0 360 0" dir="{{dur}}"></a-animation>
+                  <a-animation mixin="orbit" to="0 360 0" dur="{{dur}}"></a-animation>
                   <a-entity mixin="electron" position="{{dist}} 0 0" ></a-entity>
                 </a-entity>
               </a-entity>
