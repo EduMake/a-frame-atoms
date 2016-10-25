@@ -67,31 +67,42 @@ function getNucleonPositions(Balls){
   //var SmallestContainerRadius = Math.floor(Math.sqrt(Balls));
   //var OuterBallRadius = (SmallestContainerRadius - 1);
   var OuterBallRadius = SmallestContainerRadius;
+  var RadialPositions = [];
+  var RemainingBalls = Balls;
+  for(var r = 0; r <= Math.floor(SmallestContainerRadius/2) ; r++){
+    if(RemainingBalls > 0){
+      RemainingBalls -= getNucleonLayer(RemainingBalls, OuterBallRadius - (r), RadialPositions);
+    }
+  }
+  return RadialPositions;
+}
+
+function getNucleonLayer(Balls, OuterBallRadius, RadialPositions){
   
   var MaxBallsAroundEquator = getBallCount(OuterBallRadius);
   var Angle = getAngleFromBalls(MaxBallsAroundEquator);
   
-  console.log("Balls", Balls, "SmallestContainerRadius",SmallestContainerRadius, "OuterBallRadius", OuterBallRadius,
+  console.log("Balls", Balls, "OuterBallRadius", OuterBallRadius,
    "Equator", MaxBallsAroundEquator, "Angle", Angle, "Degrees", Angle * 180 / Math.PI);
   
-  var RadialPositions = [];
+  
   var UpwardsLayers = Math.floor(0.5 + (MaxBallsAroundEquator/4));
   console.log("UpwardsLayers", UpwardsLayers);
-  for(var q = 0; q < UpwardsLayers ; q++){
+  for(var q = 0; q <= UpwardsLayers ; q++){
     var UpAngle = q * Angle;
     var RadiusAtHeight = OuterBallRadius * Math.cos(UpAngle);
     var Angles = getAnglesAtRadius(RadiusAtHeight);
-    console.log("q,", q, "UpAngle", UpAngle * 180 / Math.PI, "RadiusAtHeight", RadiusAtHeight);//, "Angles", Angles);
+    //console.log("q,", q, "UpAngle", UpAngle * 180 / Math.PI, "RadiusAtHeight", RadiusAtHeight);//, "Angles", Angles);
     for (var w = 0; w < Angles.length; w++){
-      RadialPositions.push({lat:UpAngle * 180 / Math.PI, lon:Angles[w] * 180 / Math.PI, radius:SmallestContainerRadius});
+      RadialPositions.push({lat:UpAngle * 180 / Math.PI, lon:Angles[w] * 180 / Math.PI, radius:OuterBallRadius});
       if(q > 0){
-        RadialPositions.push({lat:-1 * UpAngle * 180 / Math.PI, lon:Angles[w] * 180 / Math.PI, radius:SmallestContainerRadius});
+        RadialPositions.push({lat:-1 * UpAngle * 180 / Math.PI, lon:Angles[w] * 180 / Math.PI, radius:OuterBallRadius});
       }
     }
   }
   
-  console.log("OuterShell", RadialPositions.length, RadialPositions.slice(0,6));
-  return RadialPositions;
+  return RadialPositions.length;
+  //return RadialPositions;
 }
 
 
@@ -129,9 +140,9 @@ for (var sName in oElements){
     for (var i =0; i< Math.min(oElement.nucleons, aPositions.length); i++){
       var oNew = aPositions[i];
       oNew.type = (i%2 == 0)?"proton":"neutron";
-      oElement.nucleus.push(oNew);
+      oElement.nucleus.unshift(oNew);
     }
-      console.log(oElement.name, oElement.nucleus.slice(0,-5));
+    //console.log(oElement.name, oElement.nucleus.slice(0,-5));
       
       
     

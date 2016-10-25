@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Nickel : UTC OLP - Atoms </title>
     <meta name="description" content="Animation - A-Frame">
-    <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
-    <script src="https://rawgit.com/bryik/aframe-bmfont-text-component/master/dist/aframe-bmfont-text-component.min.js"></script>
+    <script src="aframe.min.js"></script>
+    <script src="aframe-bmfont-text-component.min.js"></script>
     
   </head>
   <body>
@@ -25,10 +25,10 @@
       <a-sky color="#AAB"></a-sky>
       <a-entity position="0 0 6">
         <a-camera wasd-controls-enabled="true" user-height="0"></a-camera>
-        
+        <!--
         <a-entity vive-controls="hand: left"></a-entity>
         <a-entity vive-controls="hand: right"></a-entity>
-        
+        -->
       </a-entity>
       
       <a-text position="-3 2 2" color="black" scale="2" text="28 Nickel"></a-text>
@@ -44,65 +44,104 @@
       
         <a-entity rotation="0 0 0" position="0 0 0">
           <a-entity position="0 0 0">
+              <a-entity rotation="0 -72 180">
+                <a-entity mixin="proton"  position="0.293242414866094 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 72 180">
+                <a-entity mixin="neutron"  position="0.293242414866094 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 -72 0">
+                <a-entity mixin="proton"  position="0.293242414866094 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 72 0">
+                <a-entity mixin="neutron"  position="0.293242414866094 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 0 288">
+                <a-entity mixin="proton"  position="0.293242414866094 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 0 216">
+                <a-entity mixin="neutron"  position="0.293242414866094 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 0 144">
+                <a-entity mixin="proton"  position="0.293242414866094 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 0 72">
+                <a-entity mixin="neutron"  position="0.293242414866094 0 0"></a-entity>
+              </a-entity>
               <a-entity rotation="0 0 0">
-                <a-entity mixin="proton"  position="0.493242414866094 0 0"></a-entity>
+                <a-entity mixin="proton"  position="0.293242414866094 0 0"></a-entity>
               </a-entity>
-              <a-entity rotation="0 0 45">
+              <a-entity rotation="0 -90 180">
                 <a-entity mixin="neutron"  position="0.493242414866094 0 0"></a-entity>
               </a-entity>
-              <a-entity rotation="0 0 90">
+              <a-entity rotation="0 90 180">
                 <a-entity mixin="proton"  position="0.493242414866094 0 0"></a-entity>
               </a-entity>
-              <a-entity rotation="0 0 135">
+              <a-entity rotation="0 -90 0">
                 <a-entity mixin="neutron"  position="0.493242414866094 0 0"></a-entity>
               </a-entity>
-              <a-entity rotation="0 0 180">
+              <a-entity rotation="0 90 0">
                 <a-entity mixin="proton"  position="0.493242414866094 0 0"></a-entity>
               </a-entity>
-              <a-entity rotation="0 0 225">
-                <a-entity mixin="neutron"  position="0.493242414866094 0 0"></a-entity>
-              </a-entity>
-              <a-entity rotation="0 0 270">
-                <a-entity mixin="proton"  position="0.493242414866094 0 0"></a-entity>
-              </a-entity>
-              <a-entity rotation="0 0 315">
-                <a-entity mixin="neutron"  position="0.493242414866094 0 0"></a-entity>
-              </a-entity>
-              <a-entity rotation="0 45 0">
-                <a-entity mixin="proton"  position="0.493242414866094 0 0"></a-entity>
-              </a-entity>
-              <a-entity rotation="0 -45 0">
-                <a-entity mixin="neutron"  position="0.493242414866094 0 0"></a-entity>
-              </a-entity>
-              <a-entity rotation="0 45 59.99999999999999">
-                <a-entity mixin="proton"  position="0.493242414866094 0 0"></a-entity>
-              </a-entity>
-              <a-entity rotation="0 -45 59.99999999999999">
-                <a-entity mixin="neutron"  position="0.493242414866094 0 0"></a-entity>
-              </a-entity>
-              <a-entity rotation="0 45 119.99999999999999">
-                <a-entity mixin="proton"  position="0.493242414866094 0 0"></a-entity>
-              </a-entity>
-              <a-entity rotation="0 -45 119.99999999999999">
-                <a-entity mixin="neutron"  position="0.493242414866094 0 0"></a-entity>
-              </a-entity>
-              <a-entity rotation="0 45 180">
-                <a-entity mixin="proton"  position="0.493242414866094 0 0"></a-entity>
-              </a-entity>
-              <a-entity rotation="0 -45 180">
-                <a-entity mixin="neutron"  position="0.493242414866094 0 0"></a-entity>
-              </a-entity>
-              <a-entity rotation="0 45 239.99999999999997">
-                <a-entity mixin="proton"  position="0.493242414866094 0 0"></a-entity>
-              </a-entity>
-              <a-entity rotation="0 -45 239.99999999999997">
+              <a-entity rotation="0 -45 299.99999999999994">
                 <a-entity mixin="neutron"  position="0.493242414866094 0 0"></a-entity>
               </a-entity>
               <a-entity rotation="0 45 299.99999999999994">
                 <a-entity mixin="proton"  position="0.493242414866094 0 0"></a-entity>
               </a-entity>
-              <a-entity rotation="0 -45 299.99999999999994">
+              <a-entity rotation="0 -45 239.99999999999997">
                 <a-entity mixin="neutron"  position="0.493242414866094 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 45 239.99999999999997">
+                <a-entity mixin="proton"  position="0.493242414866094 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 -45 180">
+                <a-entity mixin="neutron"  position="0.493242414866094 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 45 180">
+                <a-entity mixin="proton"  position="0.493242414866094 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 -45 119.99999999999999">
+                <a-entity mixin="neutron"  position="0.493242414866094 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 45 119.99999999999999">
+                <a-entity mixin="proton"  position="0.493242414866094 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 -45 59.99999999999999">
+                <a-entity mixin="neutron"  position="0.493242414866094 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 45 59.99999999999999">
+                <a-entity mixin="proton"  position="0.493242414866094 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 -45 0">
+                <a-entity mixin="neutron"  position="0.493242414866094 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 45 0">
+                <a-entity mixin="proton"  position="0.493242414866094 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 0 315">
+                <a-entity mixin="neutron"  position="0.493242414866094 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 0 270">
+                <a-entity mixin="proton"  position="0.493242414866094 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 0 225">
+                <a-entity mixin="neutron"  position="0.493242414866094 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 0 180">
+                <a-entity mixin="proton"  position="0.493242414866094 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 0 135">
+                <a-entity mixin="neutron"  position="0.493242414866094 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 0 90">
+                <a-entity mixin="proton"  position="0.493242414866094 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 0 45">
+                <a-entity mixin="neutron"  position="0.493242414866094 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 0 0">
+                <a-entity mixin="proton"  position="0.493242414866094 0 0"></a-entity>
               </a-entity>
             </a-entity>
             <a-animation mixin="spin"></a-animation>

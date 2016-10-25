@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Fluorine : UTC OLP - Atoms </title>
     <meta name="description" content="Animation - A-Frame">
-    <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
-    <script src="https://rawgit.com/bryik/aframe-bmfont-text-component/master/dist/aframe-bmfont-text-component.min.js"></script>
+    <script src="aframe.min.js"></script>
+    <script src="aframe-bmfont-text-component.min.js"></script>
     
   </head>
   <body>
@@ -25,10 +25,10 @@
       <a-sky color="#AAB"></a-sky>
       <a-entity position="0 0 6">
         <a-camera wasd-controls-enabled="true" user-height="0"></a-camera>
-        
+        <!--
         <a-entity vive-controls="hand: left"></a-entity>
         <a-entity vive-controls="hand: right"></a-entity>
-        
+        -->
       </a-entity>
       
       <a-text position="-3 2 2" color="black" scale="2" text="9 Fluorine"></a-text>
@@ -44,19 +44,31 @@
       
         <a-entity rotation="0 0 0" position="0 0 0">
           <a-entity position="0 0 0">
-              <a-entity rotation="0 0 0">
+              <a-entity rotation="0 -72 180">
                 <a-entity mixin="proton"  position="0.3419951893353394 0 0"></a-entity>
               </a-entity>
-              <a-entity rotation="0 0 72">
+              <a-entity rotation="0 72 180">
                 <a-entity mixin="neutron"  position="0.3419951893353394 0 0"></a-entity>
               </a-entity>
-              <a-entity rotation="0 0 144">
+              <a-entity rotation="0 -72 0">
+                <a-entity mixin="proton"  position="0.3419951893353394 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 72 0">
+                <a-entity mixin="neutron"  position="0.3419951893353394 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 0 288">
                 <a-entity mixin="proton"  position="0.3419951893353394 0 0"></a-entity>
               </a-entity>
               <a-entity rotation="0 0 216">
                 <a-entity mixin="neutron"  position="0.3419951893353394 0 0"></a-entity>
               </a-entity>
-              <a-entity rotation="0 0 288">
+              <a-entity rotation="0 0 144">
+                <a-entity mixin="proton"  position="0.3419951893353394 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 0 72">
+                <a-entity mixin="neutron"  position="0.3419951893353394 0 0"></a-entity>
+              </a-entity>
+              <a-entity rotation="0 0 0">
                 <a-entity mixin="proton"  position="0.3419951893353394 0 0"></a-entity>
               </a-entity>
             </a-entity>
