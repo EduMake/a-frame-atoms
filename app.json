@@ -1,0 +1,8 @@
+{
+  "name": "a-frame-atoms",
+  "description": "GCSE Atom Simulations in A-Frame VR",
+  "repository": "http://gitlab.utcsheffield.org.uk/meggleton/a-frame-atoms",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["node", "express", "static"],
+  "image": "heroku/nodejs"
+}
