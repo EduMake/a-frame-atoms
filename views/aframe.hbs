@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{name}} : VR Atoms </title>
+    <meta name="description" content="Animation - A-Frame">
+    <script src="/javascripts/aframe.min.js"></script>
+    <script src="/javascripts/aframe-bmfont-text-component.min.js"></script>
+    
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-mixin id="electron" geometry="primitive: sphere; radius: 0.1" material="color: blue" roughness="0.2"></a-mixin>
+        <a-mixin id="neutron" geometry="primitive: sphere; radius: 0.2" material="color: green" roughness="0.4"></a-mixin>
+        <a-mixin id="proton" geometry="primitive: sphere; radius: 0.2" material="color: red" roughness="0.6"></a-mixin>
+        
+        <a-mixin id="orbit" attribute="rotation" to="0 360 0"
+                  repeat="indefinite" easing="linear" dur="3000"></a-mixin>
+        <a-mixin id="spin" attribute="rotation" to="0 -360 360"
+                  repeat="indefinite" easing="linear" dur="9000"></a-mixin>
+        <!--<img id="spectral" src="{{spectral_img}}">-->
+      </a-assets>
+      
+      <a-sky color="#AAB"></a-sky>
+      <a-entity position="0 0 6">
+        <a-camera wasd-controls-enabled="true" user-height="0"></a-camera>
+      </a-entity>
+      
+      {{{body}}}
+      
+    </a-scene>
+  </body>
+</html>
