@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>{{name}} : VR Atoms </title>
+    <title>{{#if title}}{{title}}{{else}}{{name}}{{/if}} : VR Atoms </title>
     <meta name="description" content="Animation - A-Frame">
-    <script src="/javascripts/aframe.min.js"></script>
-    <script src="/javascripts/aframe-bmfont-text-component.min.js"></script>
+    <script src="{{currentPath}}/javascripts/aframe.min.js"></script>
+    <script src="{{currentPath}}/javascripts/aframe-bmfont-text-component.min.js"></script>
     
   </head>
   <body>

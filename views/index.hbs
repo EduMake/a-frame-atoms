@@ -1,13 +1,13 @@
 <h1>VR Atoms</h1>
 <h3>Simple GCSE Chemistry atom models built in WebVR. 
-    <a href="/table" target="_blank">
+    <a href="{{currentPath}}/table/" target="_blank">
         Periodic Table
     </a></h3>
 <section>
     <h2>Atoms</h2>
     <ul>
         {{#each atoms}}
-            <li><a href="/element/{{name}}" target="atomimage">{{name}}</a> <a class="newtab" href="/element/{{name}}" target="_blank">New</a></li>
+            <li><a href="{{../currentPath}}/element/{{name}}/" target="atomimage">{{name}}</a> <a class="newtab" href="{{../currentPath}}/element/{{name}}/" target="_blank">New</a></li>
         {{/each}}
     </ul>
 </section>
