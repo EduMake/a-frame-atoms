@@ -1,6 +1,8 @@
 # a-frame-atoms
 
-Simple GCSE Chemistry atom models built in WebVR
+Simple GCSE Chemistry atom models built in WebVR.
+
+Live demo: https://edumake.github.io/a-frame-atoms/
 
 ## Static build
 
